@@ -1,12 +1,12 @@
 /*
-Author of base clock:Vincent, Hardware:2.0, Date 2023/4/17
+Author of base clock: Vincent, Hardware:2.0, Date 2023/4/17
 improved clock: Nicu FLORICA (niq_ro/tehniq3)
 v.1.0 - added digital clock
 v.1.a - flashing seconds
 v.1.b - added test touch to control hour (DST on/off)
 v.1.b1 - changed DST (1 or 0) = summer or winter time
 v.1.c - added 4 buttons (2 for adjust hours, 2 for minutes)
-v.1.c1 - show virtual button activated 
+v.1.c1 - show virtual witch button was activated + increased numbers
 */
 
 #include <Arduino_GFX_Library.h>
@@ -326,23 +326,23 @@ void loop()
     }
 
     // numerical clock by niq_ro (tehniq3)
-    gfx->setTextSize(10 /* x scale */, 10 /* y scale */, 0 /* pixel_margin */);
+    gfx->setTextSize(12 /* x scale */, 18 /* y scale */, 0 /* pixel_margin */);
     if (hh1 != hh)
     {
      gfx->setTextColor(BACKGROUND);
-     gfx->setCursor(500, 50);
+     gfx->setCursor(480, 20);
      gfx->print (hh1/10);
      gfx->print (hh1%10);
-     gfx->setTextColor(WHITE);
-     gfx->setCursor(500, 50);
+     gfx->setTextColor(DARKGREY);
+     gfx->setCursor(480, 20);
      gfx->print (hh/10);
      gfx->print (hh%10);
      hh1 = hh;
     }
 
-    gfx->setCursor(605, 50);
+    gfx->setCursor(600, 20);
     if (ss%2 == 0)
-      gfx->setTextColor(WHITE);
+      gfx->setTextColor(DARKGREY);
       else
       gfx->setTextColor(BACKGROUND);
       gfx->print(":");
@@ -350,11 +350,11 @@ void loop()
     if (mm1 != mm)
     {
      gfx->setTextColor(BACKGROUND);
-     gfx->setCursor(650, 50);
+     gfx->setCursor(650, 20);
      gfx->print (mm1/10);
      gfx->print (mm1%10);
-     gfx->setTextColor(WHITE);
-     gfx->setCursor(650, 50);
+     gfx->setTextColor(DARKGREY);
+     gfx->setCursor(650, 20);
      gfx->print (mm/10);
      gfx->print (mm%10);
      mm1 = mm;
