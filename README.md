@@ -1,4 +1,9 @@
 # ESP32-S3_TFT4.3inch
+
+# Clock v.1 - manual adjust for RTC clock
+# Clock v.2 - NTP sync at power-on or manual sync
+
+# Technical info and docs:
 1) https://www.makerfabs.com/sunton-esp32-s3-4-3-inch-ips-with-touch.html
 2) https://www.youtube.com/watch?v=d2OXlVcRYrU
 3) https://github.com/Makerfabs/ESP32-S3-Parallel-TFT-with-Touch-4.3inch
@@ -7,6 +12,3 @@
    
 ![backside](https://www.makerfabs.com/desfile/images/Sunton-ESP32-S3-IPS-with-Touch.jpg)
 
-
-#Clock v.1 - manual adjust for RTC clock
-#Clock v.2 - NTP sync at power-on or manual sync
