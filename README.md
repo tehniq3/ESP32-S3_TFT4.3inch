@@ -4,6 +4,9 @@
 # Clock v.2 - NTP sync at power-on or manual sync
 
 # Technical info and docs:
+
+![config](https://github.com/tehniq3/ESP32-S3_TFT4.3inch/blob/main/tech_info/configurare_CYD_ESP32_8048.png)
+
 1) https://www.makerfabs.com/sunton-esp32-s3-4-3-inch-ips-with-touch.html
 2) https://www.youtube.com/watch?v=d2OXlVcRYrU
 3) https://github.com/Makerfabs/ESP32-S3-Parallel-TFT-with-Touch-4.3inch
