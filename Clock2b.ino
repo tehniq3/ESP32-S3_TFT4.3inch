@@ -126,10 +126,6 @@ int br = 20;
 
 int hhntp = 5;
 int mmntp = 0;
-int tpntp = 0;
-int tp = 0;
-byte actualizare = 1;
-
 
 void setup(void)
 {
@@ -373,17 +369,17 @@ gfx->fillRoundRect(bx+bdx+bds, by+bdy+bds, bdx, bdy, br, BLUE);
    gfx->setCursor(bx+bdx+bds, by+bdy+bds-bds/2);
       gfx->print("NTPsync");
 
-tp = hh + 60 * mm;
-tpntp = hhntp +60 * mmntp;
-if ((tp == tpntp) and (ss == 0))
+if ((hh == hhntp) and (mm == mmntp))
 {
+    if (ss == 0)
+    {
    digitalWrite(TFT_BL, LOW);
       delay(500);
       NTPsync();
       delay(500);
       digitalWrite(TFT_BL, HIGH); 
+    }
 }
-
      
 }  // end main loop
 
